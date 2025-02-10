@@ -1,0 +1,58 @@
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagamento da Confraternização - Dev. Sistemas</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="payment-container">
+        <header class="payment-header">
+            <h1>Confraternização Dev. Sistemas</h1>
+            <p class="description">Aqui você irá realizar o pagamento para nossa confraternização de turma. O valor individual é de <b>R$ 20,00</b>, destinado à conta bancária do líder de turma <b>Eduardo Cardoso Gomes</b>.</p>
+        </header>
+
+        <section class="payment-notice">
+            <h2>⚠️ Aviso Importante</h2>
+            <div class="notice-content">
+                <ul>
+                    <li>O pagamento deve ser realizado de uma conta bancária em seu nome.</li>
+                    <li class="warning">Pagamentos de terceiros: envie o comprovante diretamente para o Líder (Eduardo) ou Vice-Líder (Cesar).</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="payment-details">
+            <div class="qr-code-section">
+                <h2>Pagamento via Pix</h2>
+                <div class="qr-code-upload">
+                    <input type="file" id="qrCodeFileInput" accept="image/*" onchange="handleQRCodeUpload(event)">
+                    <img src="img.jpg" alt="QR Code" class="uploaded-qr-code">
+                    <div id="qrCodeContainer" class="qr-code"></div>
+                </div>
+            </div>
+
+            <div class="pix-key-section">
+                <h2>Chave Pix</h2>
+                <div class="pix-key-input-group">
+                    <input type="text" id="pixKey" value="00020101021126580014br.gov.bcb.pix013674b876af-0db6-4c79-8380-ff9771a22481520400005303986540520.005802BR5921EDUARDO CARDOSO GOMES6009ARAGUAINA62070503***63046B5F" readonly>
+                    <button id="copyButton" onclick="copyPixKey()">Copiar Chave Pix</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="payment-info">
+            <h2>Informações de Valores</h2>
+            <p>Valor Mensal: R$ 20,00</p>
+            <p>Quantia Por Pessoa: R$ 200,00</p>
+            <p>Estimativa: R$ 3800,00</p>
+        </section>
+
+        <footer class="payment-footer">
+            <p>Técnicos em Desenvolvimento de Sistemas</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
